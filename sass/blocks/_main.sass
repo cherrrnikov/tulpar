@@ -1,0 +1,71 @@
+.main
+  padding: 120px 0 20px 0
+  background: linear-gradient(to right, $primal 50%, $light 50%)
+  &-button
+    padding: 16px 44px
+    border-radius: 25px
+    background-color: transparent
+    border: 1px solid
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    cursor: pointer
+  &-wrapper
+    display: grid
+    justify-content: space-between
+    grid-template-columns: 428px 450px
+.cardio
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  transform: translate(13.5%, 1.5%)
+  &__title
+    margin: 0
+    margin-bottom: 55px
+    font-family: "TTHoves-Bold"
+    font-style: normal
+    font-weight: 800
+    font-size: 28px
+    line-height: 36px
+    text-align: right
+    text-transform: uppercase
+    color: $light
+  &__text
+    margin: 0
+    margin-bottom: 29px
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    text-align: right
+    color: $light
+    max-width: 215px
+  &-list
+    padding: 0
+    margin: 0
+    list-style-type: none
+    margin-bottom: 80px
+    &__item
+      margin-bottom: 10px
+    &__link
+      text-decoration: none
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      text-align: right
+      color: #F9F9F9
+      &::after
+        content: ''
+        width: 7px
+        height: 7px
+        background-image: url("../img/white-circle.svg")
+        background-size: cover
+        background-repeat: no-repeat
+        display: inline-block
+        margin-left: 12px
+  &__button
+    border: 1px solid $light
+    color: $light
