@@ -1,0 +1,54 @@
+@media(max-width: 1200px)
+  .container
+    max-width: 960px
+  .navbar
+    &-links
+      max-width: 450px
+    &-list
+      &__item
+        margin-left: 20px
+@media(max-width: 992px)
+  .container
+    max-width: 700px
+  .navbar
+    &-links
+      max-width: 350px
+      transform: translate(20px, -5px)
+    &-list
+      flex-wrap: wrap
+      &__item
+        margin-left: 20px
+        margin-bottom: 5px
+@media(max-width: 768px)
+  .container
+    max-width: 500px
+    width: 92%
+  .navbar
+    &-links
+      display: none
+  .logo
+    max-width: 120px
+  .mobile
+    &-button
+      padding: 0
+      margin: 0
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 25px
+      height: 20px
+      background-color: transparent
+      border: none
+      outline: none
+      cursor: pointer
+      &__line
+        width: 100%
+        height: 3px
+        background-color: $dark
+@media(min-width: 991px)
+  .navbar
+    &-list
+      &__link
+        &:hover
+          color: $primal
+          text-decoration-line: underline
