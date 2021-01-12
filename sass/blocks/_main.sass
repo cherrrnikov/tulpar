@@ -1,6 +1,31 @@
 .main
+  position: relative
   padding: 120px 0 20px 0
   background: linear-gradient(to right, $primal 50%, $light 50%)
+  overflow: hidden
+  &::before
+    position: absolute
+    left: 0
+    top: 175px
+    content: ''
+    width: 395px
+    height: 557px
+    background-image: url("../img/desk.png")
+    background-size: cover
+    background-repeat: no-repeat
+    display: inline-block
+  &::after
+    position: absolute
+    right: -30.3%
+    top: 243px
+    content: ''
+    width: 849px
+    height: 574px
+    background-image: url("../img/bed.png")
+    background-size: cover
+    background-repeat: no-repeat
+    display: inline-block
+    overflow: hidden
   &-button
     padding: 16px 44px
     border-radius: 25px
@@ -20,10 +45,10 @@
   display: flex
   flex-direction: column
   align-items: flex-end
-  transform: translate(13.5%, 1.5%)
+  transform: translate(13.5%, 2%)
   &__title
     margin: 0
-    margin-bottom: 55px
+    margin-bottom: 50px
     font-family: "TTHoves-Bold"
     font-style: normal
     font-weight: 800
@@ -46,7 +71,7 @@
     padding: 0
     margin: 0
     list-style-type: none
-    margin-bottom: 80px
+    margin-bottom: 83px
     &__item
       margin-bottom: 10px
     &__link
@@ -56,11 +81,11 @@
       font-size: 14px
       line-height: 17px
       text-align: right
-      color: #F9F9F9
+      color: $light
       &::after
         content: ''
-        width: 7px
-        height: 7px
+        width: 8px
+        height: 8px
         background-image: url("../img/white-circle.svg")
         background-size: cover
         background-repeat: no-repeat
@@ -69,3 +94,56 @@
   &__button
     border: 1px solid $light
     color: $light
+.trauma
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  transform: translate(-7.5%, 2%)
+  &__title
+    margin: 0
+    margin-bottom: 52px
+    font-family: "TTHoves-Bold"
+    font-style: normal
+    font-weight: 800
+    font-size: 28px
+    line-height: 36px
+    text-align: left
+    text-transform: uppercase
+    color: $dark
+  &__text
+    margin: 0
+    margin-bottom: 26px
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    text-align: left
+    color: $dark
+    max-width: 215px
+  &-list
+    padding: 0
+    margin: 0
+    list-style-type: none
+    margin-bottom: 83px
+    &__item
+      margin-bottom: 10px
+    &__link
+      text-decoration: none
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      text-align: left
+      color: $dark
+      &::before
+        content: ''
+        width: 8px
+        height: 8px
+        background-image: url("../img/dark-circle.svg")
+        background-size: cover
+        background-repeat: no-repeat
+        display: inline-block
+        margin-right: 10px
+  &__button
+    border: 1px solid $dark
+    color: $dark
