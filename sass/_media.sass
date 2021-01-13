@@ -1,3 +1,9 @@
+@media(max-width: 1400px)
+  .main
+    &::before
+      left: -10%
+    &::after
+      right: -40%
 @media(max-width: 1200px)
   .container
     max-width: 960px
@@ -7,6 +13,17 @@
     &-list
       &__item
         margin-left: 20px
+  .cardio
+    transform: none
+  .trauma
+    transform: none
+  .main
+    &-wrapper
+      transform: translateX(1%)
+@media(max-width: 1100px)
+  .main
+    &::after
+      right: -50%
 @media(max-width: 992px)
   .container
     max-width: 700px
@@ -19,11 +36,31 @@
       &__item
         margin-left: 20px
         margin-bottom: 5px
+  .main
+    &::before
+      top: 45%
+      width: 300px
+      height: 423px
+      background-image: url("../img/desk-992.png")
+    &::after
+      top: 55%
+      width: 600px
+      height: 406px
+      right: -45%
+      background-image: url("../img/bed-992.png")
+    &-wrapper
+      transform: none
+      grid-template-columns: repeat(2, 325px)
+  .contact
+    &-links
+      transform: translate(100px, 60px)
 @media(max-width: 768px)
   .container
     max-width: 500px
     width: 92%
   .navbar
+    padding-bottom: 20px
+    background: $primal
     &-links
       display: none
   .logo
@@ -45,6 +82,87 @@
         width: 100%
         height: 3px
         background-color: $dark
+  .main
+    padding: 50px 0 140px 0
+    background: linear-gradient(to top,$primal 50%, $light 50%)
+    &::before
+      top: 130px
+      background-image: url("../img/desk.png")
+      width: 395px
+      height: 557px
+    &::after
+      top: 780px
+      width: 849px
+      height: 574px
+      background-image: url("../img/bed.png")
+      right: -60%
+    &-wrapper
+      transform: none
+      grid-template-columns: repeat(1, 1fr)
+      grid-row-gap: 200px
+  .cardio
+    &__title
+      color: $dark
+      margin-bottom: 40px
+    &__text
+      color: $dark
+    &-list
+      &__link
+        color: $dark
+        &::after
+          background-image: url("../img/dark-circle.svg")
+    &__button
+      color: $dark
+      border: 1px solid $dark
+  .trauma
+    &__title
+      color: $light
+      margin-bottom: 40px
+    &__text
+      color: $light
+    &-list
+      &__link
+        color: $light
+        &::before
+          background-image: url("../img/white-circle.svg")
+    &__button
+      color: $light
+      border: 1px solid $light
+  .contact
+    &-links
+      transform: translate(0, 80px)
+@media(max-width: 664px)
+  .main
+    &::after
+      right: -80%
+@media(max-width: 576px)
+  .main
+    padding-bottom: 100px
+    &::before
+      display: none
+    &::after
+      display: none
+    &-wrapper
+      grid-row-gap: 155px
+  .cardio
+    align-items: center
+    &__title
+      text-align: center
+    &__text
+      text-align: center
+    &-list
+      margin-bottom: 50px
+  .trauma
+    align-items: center
+    &__title
+      text-align: center
+    &__text
+      text-align: center
+    &-list
+      margin-bottom: 50px
+  .contact
+    &-links
+      transform: translate(0, 60px)
 @media(min-width: 991px)
   .navbar
     &-list
@@ -52,3 +170,30 @@
         &:hover
           color: $primal
           text-decoration-line: underline
+  .cardio
+    &-list
+      &__link
+        &:hover
+          color: $dark
+          &::after
+            background-image: url("../img/dark-circle.svg")
+    &__button
+      &:hover
+        color: $dark
+        border: 1px solid $dark
+  .trauma
+    &-list
+      &__link
+        &:hover
+          color: $primal
+          &::before
+            background-image: url("../img/red-circle.svg")
+    &__button
+      &:hover
+        color: $primal
+        border: 1px solid $primal
+  .contact
+    &-link
+      &:hover
+        width: 90px
+        height: 90px

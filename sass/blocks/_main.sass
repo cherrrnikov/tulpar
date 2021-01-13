@@ -1,8 +1,9 @@
 .main
   position: relative
-  padding: 120px 0 20px 0
+  padding: 120px 0 100px 0
   background: linear-gradient(to right, $primal 50%, $light 50%)
   overflow: hidden
+  z-index: 1
   &::before
     position: absolute
     left: 0
@@ -26,6 +27,7 @@
     background-repeat: no-repeat
     display: inline-block
     overflow: hidden
+    z-index: 2
   &-button
     padding: 16px 44px
     border-radius: 25px
@@ -37,6 +39,7 @@
     line-height: 17px
     text-align: center
     cursor: pointer
+    transition: all 0.2s linear 0s
   &-wrapper
     display: grid
     justify-content: space-between
@@ -82,6 +85,7 @@
       line-height: 17px
       text-align: right
       color: $light
+      transition: all 0.1s linear 0s
       &::after
         content: ''
         width: 8px
@@ -135,6 +139,7 @@
       line-height: 17px
       text-align: left
       color: $dark
+      transition: all 0.1s linear 0s
       &::before
         content: ''
         width: 8px
@@ -147,3 +152,44 @@
   &__button
     border: 1px solid $dark
     color: $dark
+.contact
+  &-links
+    position: relative
+    max-width: 400px
+    margin: auto
+    margin-right: 0
+    display: flex
+    z-index: 5
+    transform: translate(55px, 60px)
+  &-link
+    position: absolute
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    transition: all 0.3s linear 0s
+    margin-left: 10px
+    transform: translate(-50%, -50%)
+    &--purple
+      left: 0
+      background-color: rgba(195, 58, 124, 0.5)
+    &--dark
+      left: 70px
+      background-color: rgba(50, 73, 94, 0.5)
+    &--blue
+      left: 140px
+      background-color: rgba(69, 152, 255, 0.5)
+    &--green
+      left: 210px
+      background-color: rgba(20, 172, 81, 0.5)
+    &--orange
+      left: 280px
+      background-color: rgba(233, 82, 88, 0.5)
+    &__image
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-51%, -50%)
+      &--green
+        transform: translate(-50%, -51%)
+      &--orange
+        transform: translate(-51.5%, -51%)
