@@ -1,0 +1,182 @@
+.services
+  position: relative
+  padding: 70px 0 20px 0
+  background-color: $dark
+  z-index: 9
+  &-button
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    padding: 16px 44px
+    border-radius: 25px
+    background-color: transparent
+    border: 1px solid
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    cursor: pointer
+    transition: all 0.2s linear 0s
+    border: 1px solid $light
+    color: $light
+    outline: none
+    margin-bottom: 70px
+  &__title
+    margin: 0
+    font-family: "TTHoves-Bold"
+    font-style: normal
+    font-weight: 800
+    font-size: 44px
+    line-height: 52px
+    text-transform: uppercase
+    grid-column: span 2
+    color: $light
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 280px)
+    grid-template-rows: 52px 304px
+    grid-row-gap: 40px
+    grid-column-gap: 17px
+    margin-bottom: 62px
+    &__item
+      position: relative
+      height: 305px
+      cursor: pointer
+      z-index: 1
+      overflow: hidden
+      &--first
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          background-image: url("../img/pulse.svg")
+          background-size: cover
+          background-repeat: no-repeat
+          width: 44px
+          height: 44px
+          display: block
+          z-index: 3
+          opacity: 0
+          transition: all 0.2s ease-out 0s
+      &--second
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          background-image: url("../img/roller-bandage.svg")
+          background-size: cover
+          background-repeat: no-repeat
+          width: 44px
+          height: 49px
+          display: block
+          z-index: 3
+          opacity: 0
+          transition: all 0.2s ease-out 0s
+      &--third
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          background-image: url("../img/coffee.svg")
+          background-size: cover
+          background-repeat: no-repeat
+          width: 50px
+          height: 50px
+          display: block
+          z-index: 3
+          opacity: 0
+          transition: all 0.2s ease-out 0s
+      &--fourth
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          background-image: url("../img/towel.svg")
+          background-size: cover
+          background-repeat: no-repeat
+          width: 50px
+          height: 50px
+          display: block
+          z-index: 3
+          opacity: 0
+          transition: all 0.2s ease-out 0s
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 0px
+        bottom: 0
+        left: 0
+        background-color: $dark
+        opacity: 0
+        z-index: 2
+        display: block
+        transition: all 0.2s ease-out 0s
+      &--first
+        grid-column: 1
+      &-image
+        width: 100%
+        height: 240px
+        object-fit: cover
+
+.item
+  &-info
+    transition: all 0s ease-out 0s
+    z-index: 10
+    bottom: -100px
+    padding: 20px
+    &__title
+      max-width: 241px
+      margin: 0
+      font-family: "TTHoves-Bold"
+      font-style: normal
+      font-weight: 800
+      font-size: 16px
+      line-height: 20px
+      color: $light
+    &--visible
+      position: absolute
+      bottom: 0px
+      background-color: $primal
+      height: 170px
+      transition: all 0.3s ease-out 0s
+    &__text
+      opacity: 0
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: $light
+      &--visible
+        opacity: 1
+.button
+  &-down
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%) scale(1)
+    z-index: 10
+    transition: all 0.2s ease-in 0s
+    border-radius: 50%
+    &:hover
+      animation: sex 0.5s 1 ease-in-out 0.1s
+@keyframes sex
+  0%
+    transform: translate(-50%, -50%) rotate(45deg)
+  25%
+    transform: translate(-50%, -50%) rotate(-45deg)
+  50%
+    transform: translate(-50%, -50%) rotate(45deg)
+  75%
+    transform: translate(-50%, -50%) rotate(-45deg)
+  100%
+    transform: translate(-50%, -50%)

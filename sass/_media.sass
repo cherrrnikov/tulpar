@@ -219,5 +219,21 @@
   .contact
     &-link
       &:hover
-        width: 90px
-        height: 90px
+        width: 76px
+        height: 76px
+  .services
+    &-wrapper
+      &__item
+        &:hover
+          &::before
+            transition: all 0.3s ease-out 0s
+            bottom: 212px
+            opacity: 1
+          &::after
+            transition: all 0.3s ease-out 0s
+            opacity: 0.5
+            height: 100%
+    &-button
+      &:hover
+        background-color: $primal
+        border: 1px solid $primal
