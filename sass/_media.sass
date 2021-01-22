@@ -20,6 +20,14 @@
   .main
     &-wrapper
       transform: translateX(1%)
+  .services
+    &-wrapper
+      grid-template-columns: repeat(4, 227px)
+  .item
+    &-info
+      &--visible
+        height: 200px
+        bottom: -50px
 @media(max-width: 1100px)
   .main
     &::after
@@ -54,6 +62,10 @@
   .contact
     &-links
       transform: translate(100px, 60px)
+  .services
+    &-wrapper
+      grid-template-columns: repeat(2, 334px)
+      grid-gap: 30px
 @media(max-width: 768px)
   .container
     max-width: 500px
@@ -83,7 +95,7 @@
         height: 3px
         background-color: $dark
   .main
-    padding: 50px 0 140px 0
+    padding: 50px 0 170px 0
     background: linear-gradient(to top,$primal 50%, $light 50%)
     &::before
       top: 130px
@@ -131,13 +143,33 @@
   .contact
     &-links
       transform: translate(0, 80px)
+  .services
+    &-wrapper
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: 54px 304px 304px 304px 304px
+      grid-row-gap: 30px
+      grid-column-gap: 0
+      &__item
+        &--first
+          grid-row: 2
+        &--second
+          grid-row: 3
+        &--third
+          grid-row: 4
+        &--fourth
+          grid-row: 5
+    &__title
+      font-size: 36px
+  .specialists
+    &__title
+      font-size: 36px
 @media(max-width: 664px)
   .main
     &::after
       right: -80%
 @media(max-width: 576px)
   .main
-    padding-bottom: 30px
+    padding-bottom: 70px
     &::before
       display: none
     &::after
@@ -179,6 +211,13 @@
       &__image
         height: 40px
         width: 40px
+  .button
+    &-down
+      width: 54px
+      height: 54px
+  .services
+    &-wrapper
+      margin-bottom: 60px
 @media (max-width: 427px)
   .contact
     &-link
@@ -187,6 +226,12 @@
       &__image
         width: 30px
         height: 30px
+  .services
+    &__title
+      font-size: 28px
+  .specialists
+    &__title
+      font-size: 28px
 @media(min-width: 991px)
   .navbar
     &-list
@@ -225,14 +270,7 @@
     &-wrapper
       &__item
         &:hover
-          &::before
-            transition: all 0.3s ease-out 0s
-            bottom: 212px
-            opacity: 1
-          &::after
-            transition: all 0.3s ease-out 0s
-            opacity: 0.5
-            height: 100%
+          overflow: visible
     &-button
       &:hover
         background-color: $primal
